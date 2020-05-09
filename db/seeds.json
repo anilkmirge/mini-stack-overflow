@@ -1,0 +1,38 @@
+[
+	{
+		"title": "How to prevent redirect to request again if using the same route in express?",
+		"description": "I am using node, express, MongoDB, and handlebars, for rendering a page. The problem is that when get-request gets to the server, it renders the page and then requests a second time. How double-request can be avoided?",
+		"answers": [
+			{
+				"title": "If you're experiencing multiple requests from your client then I believe this will likely be a client side bug. I would post the some code for the client side as well (for example you may accidentally be calling your function attached to your onClick right way instead of adding it as a callback).",
+				"vote": 1
+			},
+			{
+				"title": "Try to read some documentation.",
+				"vote": 0
+			}
+		]
+	},
+	{
+		"title": "How to prevent redirect to request again if using the same route in express?",
+		"description": "I am using node, express, MongoDB, and handlebars, for rendering a page. The problem is that when get-request gets to the server, it renders the page and then requests a second time. How double-request can be avoided?",
+		"answers": [
+			{
+				"title": "If you're experiencing multiple requests from your client then I believe this will likely be a client side bug. I would post the some code for the client side as well (for example you may accidentally be calling your function attached to your onClick right way instead of adding it as a callback)."
+			},
+			{
+				"title": "If you're experiencing multiple requests from your client then I believe this will likely be a client side bug. I would post the some code for the client side as well (for example you may accidentally be calling your function attached to your onClick right way instead of adding it as a callback).",
+				"vote": 2
+			}
+		]
+	},
+	{
+		"title": "How to prevent redirect to request again if using the same route in express?",
+		"description": "I am using node, express, MongoDB, and handlebars, for rendering a page. The problem is that when get-request gets to the server, it renders the page and then requests a second time. How double-request can be avoided?",
+		"answers": [
+			{
+				"title": "If you're experiencing multiple requests from your client then I believe this will likely be a client side bug. I would post the some code for the client side as well (for example you may accidentally be calling your function attached to your onClick right way instead of adding it as a callback)."
+			}
+		]
+	}
+]
