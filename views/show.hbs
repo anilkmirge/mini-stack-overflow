@@ -1,16 +1,50 @@
 <div class="container">
     <div class="row">
-        <h2>{{title}}</h2>
+        <h2 class="col-12">{{title}}</h2>
         {{#each answers}}
         <div class="col-2">
             Votes: <span class="badge badge-primary badge-pill">{{this.vote}}</span>
         </div>
-        <div class="col-6">{{this.title}}</div>
-        <div class="col-4">
-            <a class="btn btn-primary btn-lg mr-2" href="edit/{{this.id}}">Edit</a>
-            <a class="btn btn-danger btn-lg" href="/questions/{{_id}}?_method=delete">Remove</a>
+        <div class="col-8">{{title}}</div>
+        <div class="col-1">
+            <form action="/questions/answers/edit/{{../id}}/{{id}}/{{title}}?_method=put" method="post"
+                accept-charset="utf-8">
+                <button type="submit" class="btn btn-primary btn-lg">Edit</button>
+            </form>
+        </div>
+        <div class="col-1">
+            <form action="/questions/answers/{{../id}}/{{id}}?_method=delete" method="post" accept-charset="utf-8">
+                <button type="submit" class="btn btn-danger btn-lg">Delete</button>
+            </form>
         </div>
         {{/each}}
+        <a class="btn btn-success btn-lg ml-2" data-toggle="modal" href="#answerBox">Add New Answer</a>
         <a class="btn btn-success btn-lg ml-2" href="/questions">Go Back</a>
+
+        <div class="modal fade" id="answerBox" tabindex="-1" role="dialog" aria-labelledby="newAnswerModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="newAnswerModalLabel">New Answer</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="/questions/{{id}}" method="post" accept-charset="utf-8">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="title" class="col-form-label">Title:</label>
+                                <input type="text" class="form-control" id="title" name="title">
+                            </div>
+                        </div>
+                        <div class=" modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Add Answer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

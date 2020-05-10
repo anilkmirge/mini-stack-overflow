@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h4 class="ml-3">Current Answer: <strong>{{title}}</strong></h4>
+            <form action="/questions/answers/edit/{{parentId}}/{{id}}?_method=put" method="post" accept-charset="utf-8">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="title" class="col-form-label">Title:</label>
+                        <input type="text" class="form-control" id="title" placeholder="New Answer" name="title">
+                    </div>
+                </div>
+                <div class=" modal-footer">
+                    <a href="/questions/{{parentId}}" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Edit Answer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
